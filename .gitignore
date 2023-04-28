@@ -1,5 +1,8 @@
+# [ignore-everything]
 *
-!.gitignore
+
+# [dont-ignore]
 !.bashrc
-!.vimrc
+!.gitignore
 !.tmux.conf
+!.vimrc
