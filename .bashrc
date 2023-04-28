@@ -1,7 +1,7 @@
 # [source]
 # [alias]
 ## [general]
-alias ll='ls -alF'
+alias ll="ls -alF"
 alias la='ls -A'
 alias l='ls -CF'
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
