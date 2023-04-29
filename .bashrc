@@ -5,6 +5,7 @@
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
+
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
 ## [python]
 alias py="python3"
@@ -15,6 +16,11 @@ alias todocs="cd ~/Documents"
 alias topics="cd ~/Pictures"
 alias desktop="cd ~/Desktop"
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
+
+# [software-checkll]
+if ! command -v nvim &> /dev/null; then
+    echo "nvim not found, please install."
+fi
 
 # Add an "alert" alias for long running commands.
 ## Use like so:
