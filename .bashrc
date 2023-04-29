@@ -19,7 +19,7 @@ alias ysfront="cd ~/Desktop/yield-sync/frontend"
 
 # [software-checkll]
 if ! command -v nvim &> /dev/null; then
-    echo "nvim not found, please install."
+	echo "[~/.bashrc] Command 'nvim' not found. Please run 'sudo apt install neovim'"
 fi
 
 # Add an "alert" alias for long running commands.
