@@ -15,7 +15,13 @@ alias todesk="cd ~/Desktop"
 alias todocs="cd ~/Documents"
 alias topics="cd ~/Pictures"
 alias desktop="cd ~/Desktop"
+## [projects]
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
+alias w3st="cd ~/Desktop/w3st-io/w3st.io"
+## [npm]
+alias lint="npm run lint"
+## [hardhat]
+
 
 # [software-checkll]
 if ! command -v nvim &> /dev/null; then
