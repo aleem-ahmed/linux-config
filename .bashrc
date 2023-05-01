@@ -23,7 +23,10 @@ alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 ## [npm]
 alias lint="npm run lint"
 ## [hardhat]
-
+## [git]
+alias gadd="git add"
+alias gcommit="git commit -m"
+alias gpush="git push"
 
 # [software-checkll]
 if ! command -v nvim &> /dev/null; then
