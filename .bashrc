@@ -5,7 +5,7 @@
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
-
+alias x="exit"
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
 ## [python]
 alias py="python3"
@@ -26,6 +26,8 @@ alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias lint="npm run lint"
 ## [hardhat]
 alias hardhattest="npx hardhat test"
+alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
+
 ## [git]
 alias gadd="git add"
 alias gcommit="git commit -m"
