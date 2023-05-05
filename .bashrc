@@ -23,6 +23,7 @@ alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 ## [npm]
 alias lint="npm run lint"
 ## [hardhat]
+alias hardhattest="npx hardhat test"
 ## [git]
 alias gadd="git add"
 alias gcommit="git commit -m"
