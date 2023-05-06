@@ -21,6 +21,7 @@ alias docs="cd ~/Documents"
 alias ys="cd ~/Desktop/yield-sync"
 alias ysv1v="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
+alias ysf="cd ~/Desktop/yield-sync/frontend"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 ## [npm]
 alias lint="npm run lint"
