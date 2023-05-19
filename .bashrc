@@ -139,14 +139,14 @@ parse_git_branch() {
 user="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]"
 host="\[\033[01;32m\]\h\[\033[00m\]"
 location="\[\033[01;34m\]\w\[\033[00m\]"
-git_branch="\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]"
+git_branch="\[\033[01;33m\]\$(parse_git_branch)\[\033[00m\]"
 
 if [ "$color_prompt" = yes ]; then
 	# [prompt-original]
 	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:$location\$ "
 	
 	# [prompt-zen]
-	PS1="╭─ $user@$host $location $git_branch \n╰─➤ "
+	PS1='╭─ $user@$host $location $git_branch \n╰─➤ '	
 else
 	# [prompt-original]
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
