@@ -14,7 +14,8 @@ alias todesktop="cd ~/Desktop"
 alias todesk="cd ~/Desktop"
 alias todocs="cd ~/Documents"
 alias topics="cd ~/Pictures"
-alias desktop="cd ~/Desktop"
+alias Desktop="cd ~/Desktop"
+alias desktop="Desktop"
 alias downloads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 ## [projects]
@@ -24,8 +25,11 @@ alias ysfront="cd ~/Desktop/yield-sync/frontend"
 alias ysf="cd ~/Desktop/yield-sync/frontend"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
+alias toheroku="cd ~/Desktop/heroku"
 ## [npm]
 alias lint="npm run lint"
+alias ndev="npm run dev"
+alias nserver="npm run server"
 ## [hardhat]
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
@@ -132,12 +136,17 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
+user="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]"
+host="\[\033[01;32m\]\h\[\033[00m\]"
+location="\[\033[01;34m\]\w\[\033[00m\]"
+git_branch="\[\e[1;01;33m\$(parse_git_branch)\[\e[00m\]"
+
 if [ "$color_prompt" = yes ]; then
 	# [prompt-original]
 	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	
 	# [prompt-zen]
-	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\] \[\033[01;32m\]\h\[\033[00m\] \[\e[1;01;33m\$(parse_git_branch)\[\e[00m\] \n\[\033[01;34m\]\w\[\033[00m\] "
+	PS1="╭─ $user@$host $location $git_branch \n╰─➤ "
 else
 	# [prompt-original]
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -149,5 +158,3 @@ unset color_prompt force_color_prompt
 
 # Created by `pipx` on 2022-05-24 14:00:42
 export PATH="$PATH:/home/harpoon/.local/bin"
-
-
