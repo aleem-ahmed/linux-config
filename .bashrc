@@ -120,7 +120,7 @@ if [ -n "$force_color_prompt" ]; then
 	fi
 fi
 
-show_colors() {
+colors() {
 	for x in {0..8}; do 
 		for i in {30..37}; do 
 			for a in {40..47}; do 
@@ -139,11 +139,11 @@ parse_git_branch() {
 user="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]"
 host="\[\033[01;32m\]\h\[\033[00m\]"
 location="\[\033[01;34m\]\w\[\033[00m\]"
-git_branch="\[\e[1;01;33m\$(parse_git_branch)\[\e[00m\]"
+git_branch="\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]"
 
 if [ "$color_prompt" = yes ]; then
 	# [prompt-original]
-	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:$location\$ "
 	
 	# [prompt-zen]
 	PS1="╭─ $user@$host $location $git_branch \n╰─➤ "
