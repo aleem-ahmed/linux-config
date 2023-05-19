@@ -29,7 +29,7 @@ alias toheroku="cd ~/Desktop/heroku"
 ## [npm]
 alias lint="npm run lint"
 alias ndev="npm run dev"
-alias nserver="npm run server"
+alias nserve="npm run serve"
 ## [hardhat]
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
