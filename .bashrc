@@ -116,12 +116,28 @@ if [ -n "$force_color_prompt" ]; then
 	fi
 fi
 
+show_colors() {
+	for x in {0..8}; do 
+		for i in {30..37}; do 
+			for a in {40..47}; do 
+				echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
+			done
+			echo
+		done
+	done
+	echo ""
+}
+
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
 if [ "$color_prompt" = yes ]; then
 	# [prompt-original]
 	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	
 	# [prompt-zen]
-	PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\] \[\033[01;32m\]\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] '
+	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\] \[\033[01;32m\]\h\[\033[00m\] \[\e[1;01;33m\$(parse_git_branch)\[\e[00m\] \n\[\033[01;34m\]\w\[\033[00m\] "
 else
 	# [prompt-original]
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -133,3 +149,5 @@ unset color_prompt force_color_prompt
 
 # Created by `pipx` on 2022-05-24 14:00:42
 export PATH="$PATH:/home/harpoon/.local/bin"
+
+
