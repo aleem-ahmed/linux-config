@@ -27,7 +27,7 @@ alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
 ## [npm]
-alias lint="npm run lint"
+alias nlint="npm run lint"
 alias ndev="npm run dev"
 alias nserve="npm run serve"
 ## [hardhat]
