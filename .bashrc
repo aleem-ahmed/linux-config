@@ -146,15 +146,18 @@ if [ "$color_prompt" = yes ]; then
 	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:$location\$ "
 	
 	# [prompt-zen]
-	PS1='╭─ $user@$host $location $git_branch \n╰─➤ '	
+	PS1="╭─ $user@$host $location $git_branch \n╰─➤ "
 else
 	# [prompt-original]
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 	# [prompt-zen]
-	PS1='${debian_chroot:+($debian_chroot)}\u \h \w\ '
+	PS1="${debian_chroot:+($debian_chroot)}\u \h \w\ "
 fi
 
 unset color_prompt force_color_prompt
 
 # Created by `pipx` on 2022-05-24 14:00:42
 export PATH="$PATH:/home/harpoon/.local/bin"
+
+## Time Format
+# %l:%M:%S %p  [%Y/%m/%d]
