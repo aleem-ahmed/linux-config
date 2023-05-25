@@ -136,7 +136,7 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-user="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]"
+user="\[\033[01;31m\]\u\[\033[00m\]"
 host="\[\033[01;32m\]\h\[\033[00m\]"
 location="\[\033[01;34m\]\w\[\033[00m\]"
 git_branch="\[\033[01;33m\]\$(parse_git_branch)\[\033[00m\]"
