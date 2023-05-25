@@ -146,7 +146,7 @@ if [ "$color_prompt" = yes ]; then
 	PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:$location\$ "
 	
 	# [prompt-zen]
-	PS1="╭─ $user@$host $location $git_branch \n╰─➤ "
+	PS1="$user@$host $location $git_branch \n➤ "
 else
 	# [prompt-original]
 	PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
