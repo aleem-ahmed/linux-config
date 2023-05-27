@@ -161,3 +161,5 @@ export PATH="$PATH:/home/harpoon/.local/bin"
 
 ## Time Format
 # %l:%M:%S %p  [%Y/%m/%d]
+
+## SCT (Set color temperature) Application for setting redshift
