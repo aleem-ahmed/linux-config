@@ -40,6 +40,7 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 alias gadd="git add"
 alias gcommit="git commit -m"
 alias gpush="git push"
+alias gco="git checkout"
 
 # [software-checkll]
 if ! command -v nvim &> /dev/null; then
