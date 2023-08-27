@@ -7,6 +7,7 @@ alias la="ls -A"
 alias l="ls -CF"
 alias x="exit"
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
+alias cs="vi ~/.bashrc"
 ## [python]
 alias py="python3"
 ## [location]
@@ -21,6 +22,7 @@ alias downloads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 ## [projects]
 alias ys="cd ~/Desktop/yield-sync"
+alias ysv="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysv1v="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
 alias ysf="cd ~/Desktop/yield-sync/frontend"
