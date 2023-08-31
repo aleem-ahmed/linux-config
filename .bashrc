@@ -35,9 +35,9 @@ alias nlint="npm run lint"
 alias ndev="npm run dev"
 alias nserve="npm run serve"
 alias ninstall="npm install"
+### [hardhat]
 alias hh="npx hardhat"
-
-## [hardhat]
+alias hht="npx hardhat test"
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
@@ -177,3 +177,4 @@ export PATH="$PATH:/home/harpoon/.local/bin"
 # %l:%M:%S %p  [%Y/%m/%d]
 
 ## SCT (Set color temperature) Application for setting redshift
+. "$HOME/.cargo/env"
