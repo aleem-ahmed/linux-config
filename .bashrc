@@ -1,15 +1,14 @@
 # [source]
 
+# [software-checkll]
+if ! command -v nvim &> /dev/null; then
+        echo "[~/.bashrc] Command 'nvim' not found. Please run 'sudo apt install neovim'"
+fi
+
 # [alias]
-## [general]
-alias ll="ls -alF"
-alias la="ls -A"
-alias l="ls -CF"
-alias x="exit"
-alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
-alias cs="vi ~/.bashrc"
 ## [python]
 alias py="python3"
+
 ## [location]
 alias todesktop="cd ~/Desktop"
 alias todesk="cd ~/Desktop"
@@ -20,6 +19,7 @@ alias desktop="cd ~/Desktop"
 alias desk="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 alias docs="cd ~/Documents"
+
 ## [projects]
 alias ys="cd ~/Desktop/yield-sync"
 alias ysv="cd ~/Desktop/yield-sync/v1-vaults"
@@ -29,12 +29,14 @@ alias ysf="cd ~/Desktop/yield-sync/frontend"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
+
 ## [npm]
 alias nlint="npm run lint"
 alias ndev="npm run dev"
 alias nserve="npm run serve"
 alias ninstall="npm install"
 alias hh="npx hardhat"
+
 ## [hardhat]
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
@@ -45,10 +47,16 @@ alias gcommit="git commit -m"
 alias gpush="git push"
 alias gco="git checkout"
 
-# [software-checkll]
-if ! command -v nvim &> /dev/null; then
-	echo "[~/.bashrc] Command 'nvim' not found. Please run 'sudo apt install neovim'"
-fi
+## [vim]
+alias vi="vi -u ~/.vimrc"
+
+## [general]
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+alias x="exit"
+alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
+alias cs="vi ~/.bashrc"
 
 # Add an "alert" alias for long running commands.
 ## Use like so:
