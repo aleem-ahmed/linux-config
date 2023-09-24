@@ -46,7 +46,7 @@ alias gadd="git add"
 alias gcommit="git commit -m"
 alias gpush="git push"
 alias gco="git checkout"
-
+alias gcom="git checkout master"
 ## [vim]
 alias vi="vi -u ~/.vimrc"
 
@@ -57,7 +57,7 @@ alias l="ls -CF"
 alias x="exit"
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
 alias cs="vi ~/.bashrc"
-
+alias t="tmux -u"
 # Add an "alert" alias for long running commands.
 ## Use like so:
 ## `sleep 10; alert``
