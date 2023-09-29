@@ -44,6 +44,7 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 ## [git]
 alias gadd="git add"
 alias gcommit="git commit -m"
+alias gpul="git pull"
 alias gpush="git push"
 alias gco="git checkout"
 alias gcom="git checkout master"
