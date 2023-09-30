@@ -48,6 +48,8 @@ alias gpul="git pull"
 alias gpush="git push"
 alias gco="git checkout"
 alias gcom="git checkout master"
+alias gstatus="git status"
+alias grepb="git branch | grep $1"
 ## [vim]
 alias vi="vi -u ~/.vimrc"
 
