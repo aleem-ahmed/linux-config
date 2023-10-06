@@ -20,13 +20,16 @@ alias desk="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 alias docs="cd ~/Documents"
 
-## [projects]
+## [yield-sync]
 alias ys="cd ~/Desktop/yield-sync"
+alias ysa="cd ~/Desktop/yield-sync/v1-amp"
 alias ysv="cd ~/Desktop/yield-sync/v1-vaults"
-alias yso="cd ~/Desktop/yield-sync/optimizer"
 alias ysv1v="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
 alias ysf="cd ~/Desktop/yield-sync/frontend"
+alias yss="cd ~/Desktop/yield-sync/specifications"
+
+## [w3st]
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
