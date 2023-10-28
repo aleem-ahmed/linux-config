@@ -73,7 +73,8 @@ alias grep2="find --type f | xargs grep -e $1 -l | xargs grep -e $2 -l"
 alias dbstart="sudo /etc/init.d/mysql start"
 alias dbstatus="sudo /etc/init.d/mysql status"
 alias dbstop="sudo /etc/init.d/mysql stop"
-alias dbrestart="sudo /etc/init.d/mysql restart" 
+alias dbrestart="sudo /etc/init.d/mysql restart"
+alias mysql="sudo mysql --prompt='\u@\h [\d]> '"
 
 ## [general]
 alias ll="ls -alF"
