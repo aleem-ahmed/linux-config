@@ -48,7 +48,7 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 ## [mongodb]
 alias mdbstart="sudo systemctl start mongod"
-alias mdbstatus="systemctl status mongod"
+alias mdbstatus="sudo systemctl status mongod"
 alias mdbstop="sudo systemctl stop mongod"
 
 ## [git]
@@ -67,6 +67,13 @@ alias vi="vi -u ~/.vimrc"
 
 ## [grep]
 alias grep2="find --type f | xargs grep -e $1 -l | xargs grep -e $2 -l"
+
+## [sql]
+### Prereq. sudo apt install mysql mysql-server
+alias dbstart="sudo /etc/init.d/mysql start"
+alias dbstatus="sudo /etc/init.d/mysql status"
+alias dbstop="sudo /etc/init.d/mysql stop"
+alias dbrestart="sudo /etc/init.d/mysql restart" 
 
 ## [general]
 alias ll="ls -alF"
