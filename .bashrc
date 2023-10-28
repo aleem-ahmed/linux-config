@@ -74,7 +74,8 @@ alias dbstart="sudo /etc/init.d/mysql start"
 alias dbstatus="sudo /etc/init.d/mysql status"
 alias dbstop="sudo /etc/init.d/mysql stop"
 alias dbrestart="sudo /etc/init.d/mysql restart"
-alias mysql="sudo mysql --prompt='\u@\h [\d]> '"
+alias sql="sudo mysql --prompt='\u@\h [\d]> '"
+alias db="sql"
 
 ## [general]
 alias ll="ls -alF"
