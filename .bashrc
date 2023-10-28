@@ -48,7 +48,8 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 ## [mongodb]
 alias mdbstart="sudo systemctl start mongod"
-alias mdbstatus="sudo systemctl status mongod"
+alias mdbstatus="systemctl status mongod"
+alias mdbstop="sudo systemctl stop mongod"
 
 ## [git]
 alias gadd="git add"
@@ -60,6 +61,7 @@ alias gco="git checkout"
 alias gcom="git checkout master"
 alias gstatus="git status"
 alias grepb="git branch | grep $1"
+
 ## [vim]
 alias vi="vi -u ~/.vimrc"
 
