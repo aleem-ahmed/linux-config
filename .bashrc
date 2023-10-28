@@ -39,11 +39,16 @@ alias nlint="npm run lint"
 alias ndev="npm run dev"
 alias nserve="npm run serve"
 alias ninstall="npm install"
+
 ### [hardhat]
 alias hh="npx hardhat"
 alias hht="npx hardhat test"
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
+
+## [mongodb]
+alias mdbstart="sudo systemctl start mongod"
+alias mdbstatus="sudo systemctl status mongod"
 
 ## [git]
 alias gadd="git add"
@@ -57,6 +62,9 @@ alias gstatus="git status"
 alias grepb="git branch | grep $1"
 ## [vim]
 alias vi="vi -u ~/.vimrc"
+
+## [grep]
+alias grep2="find --type f | xargs grep -e $1 -l | xargs grep -e $2 -l"
 
 ## [general]
 alias ll="ls -alF"
