@@ -36,10 +36,10 @@ alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
 
 ## [npm]
-alias nlint="npm run lint"
 alias ndev="npm run dev"
-alias nserve="npm run serve"
 alias ninstall="npm install"
+alias nlint="npm run lint"
+alias nserve="npm run serve"
 alias ntest="npm run test"
 
 ### [hardhat]
@@ -77,7 +77,7 @@ alias dbstatus="sudo /etc/init.d/mysql status"
 alias dbstop="sudo /etc/init.d/mysql stop"
 alias dbrestart="sudo /etc/init.d/mysql restart"
 alias sql="sudo mysql --prompt='\u@\h [\d]> '"
-alias db="sql"
+alias db="sudo mysql --prompt='\u@\h [\d]> '"
 
 ## [general]
 alias ll="ls -alF"
@@ -87,6 +87,7 @@ alias x="exit"
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
 alias cs="vi ~/.bashrc"
 alias t="tmux -u"
+
 # Add an "alert" alias for long running commands.
 ## Use like so:
 ## `sleep 10; alert``
