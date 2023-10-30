@@ -30,6 +30,7 @@ alias ysf="cd ~/Desktop/yield-sync/frontend"
 alias yss="cd ~/Desktop/yield-sync/specifications"
 
 ## [w3st]
+alias w3="cd ~/Desktop/w3st-io"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
@@ -39,6 +40,7 @@ alias nlint="npm run lint"
 alias ndev="npm run dev"
 alias nserve="npm run serve"
 alias ninstall="npm install"
+alias ntest="npm run test"
 
 ### [hardhat]
 alias hh="npx hardhat"
