@@ -7,7 +7,7 @@ set cursorline
 set scrolloff=6
 set tabstop=4
 set shiftwidth=4
-set expandtabi
+set expandtab
 
 nnoremap <silent> <A-Up> :m .-2<CR>==
 nnoremap <silent> <A-Down> :m .+1<CR>==
