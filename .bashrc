@@ -62,6 +62,7 @@ alias gclone="git clone"
 alias gco="git checkout"
 alias gcom="git checkout master"
 alias gstatus="git status"
+
 alias grepb="git branch | grep $1"
 
 ## [vim]
@@ -76,8 +77,7 @@ alias dbstart="sudo /etc/init.d/mysql start"
 alias dbstatus="sudo /etc/init.d/mysql status"
 alias dbstop="sudo /etc/init.d/mysql stop"
 alias dbrestart="sudo /etc/init.d/mysql restart"
-alias sql="sudo mysql --prompt='\u@\h [\d]> '"
-alias db="sudo mysql --prompt='\u@\h [\d]> '"
+alias sql="sudo mysql --prompt='\\u@\\h (\\d) \n> '"
 
 ## [general]
 alias ll="ls -alF"
