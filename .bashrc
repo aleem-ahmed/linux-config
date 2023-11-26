@@ -65,6 +65,13 @@ alias gstatus="git status"
 
 alias grepb="git branch | grep $1"
 
+gall()
+{
+	git add .;
+	git commit -m "$1";
+	git push;
+}
+
 ## [vim]
 alias vi="vi -u ~/.vimrc"
 
@@ -164,7 +171,8 @@ if [ -n "$force_color_prompt" ]; then
 	fi
 fi
 
-colors() {
+colors()
+{
 	for x in {0..8}; do 
 		for i in {30..37}; do 
 			for a in {40..47}; do 
@@ -176,7 +184,8 @@ colors() {
 	echo ""
 }
 
-parse_git_branch() {
+parse_git_branch()
+{
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
