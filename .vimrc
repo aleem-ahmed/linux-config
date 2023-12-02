@@ -32,7 +32,7 @@ set nocompatible
 set backspace=indent,eol,start
 set number
 set relativenumber
-set cursorline
+"set cursorline
 set scrolloff=6
 set tabstop=4
 set shiftwidth=4
