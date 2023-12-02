@@ -61,6 +61,7 @@ alias gpush="git push"
 alias gclone="git clone"
 alias gco="git checkout"
 alias gcom="git checkout master"
+alias gpull="git pull"
 alias gstatus="git status"
 
 alias grepb="git branch | grep $1"
