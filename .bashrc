@@ -22,7 +22,7 @@ alias docs="cd ~/Documents"
 
 ## [yield-sync]
 alias ys="cd ~/Desktop/yield-sync"
-alias ysa="cd ~/Desktop/yield-sync/v1-amp"
+alias yse="cd ~/Desktop/yield-sync/v1-emp"
 alias ysv="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysv1v="cd ~/Desktop/yield-sync/v1-vaults"
 alias ysfront="cd ~/Desktop/yield-sync/frontend"
@@ -88,7 +88,8 @@ alias dbrestart="sudo /etc/init.d/mysql restart"
 alias sql="sudo mysql --prompt='\\u@\\h (\\d) \n> '"
 
 ## [general]
-alias ll="ls -alF"
+alias ls="ls --group-directories-first -A"
+alias ll="ls --group-directories-first -alFA"
 alias la="ls -A"
 alias l="ls -CF"
 alias x="exit"
