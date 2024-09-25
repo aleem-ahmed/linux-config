@@ -80,13 +80,3 @@ alias w3="cd ~/Desktop/w3st-io"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
-
-
-# Software check
-if ! command -v nvim &> /dev/null; then
-    echo "[zsh] Command 'nvim' not found. Please run 'sudo apt install neovim'"
-else
-	alias vi="nvim"
-fi
-
-# %l:%M:%S %p [%Y/%m/%d]

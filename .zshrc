@@ -74,13 +74,14 @@ ZSH_THEME="bira"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-if [ -f $ZSH/oh-my-zsh.sh.sh ]; then
+if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 else
-  echo "No oh-my-zsh found. Please install."
+  echo "No '.oh-my-zsh' found. Please install."
 fi
 
 source ./aliases.sh
+source ./common-logic.sh
 
 # User configuration
 
