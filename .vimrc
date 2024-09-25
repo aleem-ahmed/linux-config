@@ -1,0 +1,9 @@
+set mouse=a
+set nocompatible
+set backspace=indent,eol,start
+set number
+set cursorline
+set scrolloff=6
+set tabstop=4
+set shiftwidth=4
+set noexpandtab

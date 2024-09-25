@@ -1,0 +1,17 @@
+# [ignore-everything]
+*
+
+# [dont-ignore]
+!aliases.sh
+!.bashrc
+!.gitignore
+!.tmux.conf
+!.vimrc
+!.face
+!.config
+!.config/nvim
+!.config/nvim/**
+!.fonts/
+!.fonts/**
+!.zshrc
+
