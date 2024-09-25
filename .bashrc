@@ -83,13 +83,6 @@ fi
 
 unset color_prompt force_color_prompt
 
-# Functions
-gall() {
-	git add .;
-	git commit -m "$1";
-	git push;
-}
-
 colors() {
 	for x in {0..8}; do 
 		for i in {30..37}; do 

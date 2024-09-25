@@ -4,3 +4,11 @@ if ! command -v nvim &> /dev/null; then
 else
 	alias vi="nvim"
 fi
+
+# Functions
+gall() {
+	git add .;
+	git commit -m "$1";
+	git push;
+}
+
