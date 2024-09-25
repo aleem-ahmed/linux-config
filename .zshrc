@@ -77,7 +77,7 @@ plugins=(git)
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 else
-  echo "No '.oh-my-zsh' found. Please install."
+  echo "[~/.zshrc] '.oh-my-zsh' Not found"
 fi
 
 source ./exports.sh
