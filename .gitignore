@@ -3,6 +3,7 @@
 
 # [dont-ignore]
 !aliases.sh
+!common-logic.sh
 !.bashrc
 !.gitignore
 !.tmux.conf
