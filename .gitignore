@@ -4,6 +4,7 @@
 # [dont-ignore]
 !aliases.sh
 !common-logic.sh
+!exports.sh
 !.bashrc
 !.gitignore
 !.tmux.conf

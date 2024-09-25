@@ -10,8 +10,9 @@ shopt -s checkwinsize     # Check window size after each command
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-source ./common-logic.sh
+source ./exports.sh
 source ./aliases.sh
+source ./common-logic.sh
 
 # If not running interactively, don't do anything
 case $- in
