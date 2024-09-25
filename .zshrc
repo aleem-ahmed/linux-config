@@ -80,8 +80,8 @@ else
   echo "No '.oh-my-zsh' found. Please install."
 fi
 
-source ./aliases.sh
 source ./common-logic.sh
+source ./aliases.sh
 
 # User configuration
 

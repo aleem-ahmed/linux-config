@@ -1,5 +1,3 @@
-export PATH="$PATH:/home/harpoon/.local/bin"
-
 # Aliases
 alias cls="clear"
 alias ls="ls --group-directories-first -A --color='auto'"

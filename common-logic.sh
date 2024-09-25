@@ -1,3 +1,5 @@
+export PATH="$PATH:/home/harpoon/.local/bin"
+
 # Software check
 if ! command -v nvim &> /dev/null; then
     echo "[zsh] Command 'nvim' not found. Please run 'sudo apt install neovim'"
