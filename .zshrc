@@ -80,9 +80,9 @@ else
   echo "[~/.zshrc] '.oh-my-zsh' Not found"
 fi
 
-source ./exports.sh
-source ./aliases.sh
-source ./common-logic.sh
+source ~/exports.sh
+source ~/aliases.sh
+source ~/common-logic.sh
 
 # User configuration
 
