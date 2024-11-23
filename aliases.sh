@@ -65,6 +65,9 @@ alias dbstatus="sudo /etc/init.d/mysql status"
 alias dbstop="sudo /etc/init.d/mysql stop"
 alias sql="sudo mysql --prompt='\\u@\\h (\\d) > '"
 
+# Notes
+alias notes="cd ~/Desktop/notes"
+
 # Project navigation aliases
 YIELD_SYNC_LOCATION="~/Desktop/yield-sync"
 alias ys="cd $YIELD_SYNC_LOCATION"
