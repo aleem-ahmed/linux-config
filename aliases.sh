@@ -66,7 +66,9 @@ alias dbstop="sudo /etc/init.d/mysql stop"
 alias sql="sudo mysql --prompt='\\u@\\h (\\d) > '"
 
 # Notes
-alias notes="cd ~/Desktop/notes"
+alias private_notes="cd ~/Desktop/private-notes"
+alias pnotes="private_notes"
+alias notes="private_notes"
 
 # Project navigation aliases
 YIELD_SYNC_LOCATION="~/Desktop/yield-sync"
