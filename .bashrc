@@ -10,9 +10,20 @@ shopt -s checkwinsize     # Check window size after each command
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+
+if command -v zsh >/dev/null 2>&1; then
+    echo "[~/.bashrc] Please use zsh instead of bash"
+else
+    echo "[~/.bashrc] zsh is not installed"
+fi
+
 source ./exports.sh
 source ./aliases.sh
 source ./common-logic.sh
+
+
+alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
+
 
 # If not running interactively, don't do anything
 case $- in
