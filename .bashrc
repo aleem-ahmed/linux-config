@@ -15,7 +15,7 @@ if command -v zsh >/dev/null 2>&1; then
 	echo "[~/.bashrc] Please use zsh instead of bash."
 else
 	# Prompt the user (default is Yes)
-	read -p "[~/.bashrc] zsh is not installed. Would you like to install zsh? (Y/n): " choice
+	read -p "[~/.bashrc] zsh is not installed. Do you want to isntall it? (Y/n): " choice
 	choice=${choice:-Y}  # Default to "Y" if the user presses Enter
 
 	case "$choice" in
