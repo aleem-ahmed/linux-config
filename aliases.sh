@@ -29,6 +29,7 @@ alias ninstall="npm install"
 alias nlint="npm run lint"
 alias nserve="npm run serve"
 alias ntest="npm run test"
+alias npmp="npm publish --access public"
 
 # Hardhat aliases
 alias hh="npx hardhat"
@@ -74,14 +75,22 @@ alias notes="private_notes"
 # Project navigation aliases
 YIELD_SYNC_LOCATION="~/Desktop/yield-sync"
 alias ys="cd $YIELD_SYNC_LOCATION"
+
+alias yssdk="cd $YIELD_SYNC_LOCATION/sdk"
+
 alias yse="cd $YIELD_SYNC_LOCATION/v1-emp"
-alias ysef="cd $YIELD_SYNC_LOCATION/frontend-v1-emp"
-alias ysvf="cd $YIELD_SYNC_LOCATION/frontend-v1-vaults"
+
 alias ysv="cd $YIELD_SYNC_LOCATION/v1-vaults"
-alias ysfront="cd $YIELD_SYNC_LOCATION/frontend"
+
 alias yss="cd $YIELD_SYNC_LOCATION/specifications"
+
+alias ysf="cd $YIELD_SYNC_LOCATION/frontend"
+alias ysfront="cd $YIELD_SYNC_LOCATION/frontend"
+
+alias ysvf="cd $YIELD_SYNC_LOCATION/frontend-v1-vaults"
+
 alias yssr="cd $YIELD_SYNC_LOCATION/server"
-alias yssdk="cd $YIELD_SYNC_LOCATION/v1-sdk"
+
 
 alias w3="cd ~/Desktop/w3st-io"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"

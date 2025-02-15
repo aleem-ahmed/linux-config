@@ -17,9 +17,9 @@ else
     echo "[~/.bashrc] zsh is not installed"
 fi
 
-source ./exports.sh
-source ./aliases.sh
-source ./common-logic.sh
+source ~/exports.sh
+source ~/aliases.sh
+source ~/common-logic.sh
 
 
 alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"

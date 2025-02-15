@@ -5,6 +5,7 @@
 !aliases.sh
 !common-logic.sh
 !exports.sh
+!install-zsh.sh
 !.bashrc
 !.gitignore
 !.tmux.conf
