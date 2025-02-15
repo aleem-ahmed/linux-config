@@ -1,7 +1,8 @@
 # [ignore-everything]
 *
 
-# [dont-ignore]
+# Dont Ignore
+!README.md
 !aliases.sh
 !common-logic.sh
 !exports.sh
