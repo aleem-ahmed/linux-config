@@ -74,7 +74,7 @@ ZSH_THEME="bira"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source ~/install-zsh.sh
+source ~/install-oh-my-zsh.sh
 source ~/exports.sh
 source ~/aliases.sh
 source ~/common-logic.sh
