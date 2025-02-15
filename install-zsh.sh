@@ -1,7 +1,7 @@
 if [ -f "$ZSH/oh-my-zsh.sh" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 else
-	echo -n "[~/.zshrc] '.oh-my-zsh' is not installed. Do you want to install Oh My Zsh? (y/n) "
+	echo -n "[~/.zshrc] '.oh-my-zsh' is not installed. Do you want to install Oh My Zsh? (Y/n) "
 	
 	# Default to 'y' if Enter is pressed (empty input)
     read choice
