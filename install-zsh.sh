@@ -1,9 +1,11 @@
 if [ -f "$ZSH/oh-my-zsh.sh" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 else
-	echo "[~/.zshrc] '.oh-my-zsh' is not installed."
-	echo -n "Do you want to install Oh My Zsh? (y/n) "
-	read choice
+	echo -n "[~/.zshrc] '.oh-my-zsh' is not installed. Do you want to install Oh My Zsh? (y/n) "
+	
+	# Default to 'y' if Enter is pressed (empty input)
+    read choice
+    choice=${choice:-y}  # Default to 'y' if the user presses Enter
 
 	if [[ "$choice" =~ ^[Yy]$ ]]; then
 		echo "Installing Oh My Zsh..."
