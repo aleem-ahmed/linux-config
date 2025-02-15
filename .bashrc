@@ -20,7 +20,7 @@ else
 
 	case "$choice" in
 		y|Y|"" ) 
-			echo "Installing zsh..."
+			echo "Installing zsh.."
 			
 			# Detect package manager and install zsh
 			if command -v apt >/dev/null 2>&1; then
