@@ -38,9 +38,9 @@ alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 # SQL alises
-alias mysql="sudo mysql -u root"
-alias mysqlstatus="systemctl status mysql"
-alias mysqlrestart="sudo systemctl restart mysql"
+alias mysql="sudo mariadb -u root"
+alias mysqlstatus="systemctl status mariadb"
+alias mysqlrestart="sudo systemctl restart mariadb"
 alias db="mysql"
 alias dbstatus="mysqlstatus"
 alias dbrestart="mysqlrestart"
