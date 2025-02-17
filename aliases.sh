@@ -39,6 +39,9 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 # SQL alises
 alias mysql="sudo mysql -u root"
+alias mysqlstatus="systemctl status mysql"
+alias db="mysql"
+alias dbstatus="mysqlstatus"
 
 # MongoDB aliases
 alias mdbstart="sudo systemctl start mongod"
