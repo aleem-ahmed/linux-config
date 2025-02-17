@@ -37,13 +37,13 @@ alias hht="npx hardhat test"
 alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
-# SQL alises
-alias mysql="sudo mariadb -u root"
-alias mysqlstatus="systemctl status mariadb"
-alias mysqlrestart="sudo systemctl restart mariadb"
-alias db="mysql"
-alias dbstatus="mysqlstatus"
-alias dbrestart="mysqlrestart"
+# SQL aliases
+alias installmysql="sudo apt install mysql-server"
+alias db="sudo mysql -u root"
+alias dbstart="sudo systemctl start mariadb"
+alias dbstatus="sudo systemctl status mariadb"
+alias dbstop="sudo systemctl stop mariadb"
+alias sql="sudo mysql --prompt='\\u@\\h (\\d) > '"
 
 # MongoDB aliases
 alias mdbstart="sudo systemctl start mongod"
@@ -67,13 +67,6 @@ alias vi="vi -u ~/.vimrc"
 
 # Grep alias
 alias grep2="find --type f | xargs grep -e $1 -l | xargs grep -e $2 -l"
-
-# SQL aliases
-alias installsql="sudo apt install mysql mysql-server"
-alias dbstart="sudo /etc/init.d/mysql start"
-alias dbstatus="sudo /etc/init.d/mysql status"
-alias dbstop="sudo /etc/init.d/mysql stop"
-alias sql="sudo mysql --prompt='\\u@\\h (\\d) > '"
 
 # Notes
 alias private_notes="cd ~/Desktop/private-notes"
