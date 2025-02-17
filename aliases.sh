@@ -38,8 +38,8 @@ alias hardhattest="npx hardhat test"
 alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 # SQL aliases
-alias installmysql="sudo apt install mysql-server"
-alias db="sudo mysql -u root"
+alias installmysql="sudo apt install mariadb-server"
+alias db="sudo mariadb -u root"
 alias dbstart="sudo systemctl start mariadb"
 alias dbstatus="sudo systemctl status mariadb"
 alias dbstop="sudo systemctl stop mariadb"
