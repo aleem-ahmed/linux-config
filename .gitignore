@@ -16,7 +16,7 @@
 !.config
 !.config/nvim
 !.config/nvim/**
-!Desktop/private-notes/
-!Desktop/private-notes/**
+!private-notes/
+!private-notes/**
 !.zshrc
 
