@@ -20,6 +20,7 @@ alias todesktop="cd ~/Desktop"
 alias todocs="cd ~/Documents"
 alias topics="cd ~/Pictures"
 alias downloads="cd ~/Downloads"
+alias down="cd ~/Downloads"
 alias desktop="cd ~/Desktop"
 alias desk="desktop"
 
