@@ -40,7 +40,8 @@ alias hardhatdeploy="npx hardhat run --network $1 scripts/deploy.js"
 
 # SQL aliases
 alias installmariadb="sudo apt install mariadb-server"
-alias db="sudo mariadb -u root --prompt='\\u@\\h (\\d) > ' --password=password"
+alias sql="sudo mariadb -u root --prompt='\\u@\\h (\\d) > ' --password=password"
+alias db="sql"
 alias dbstart="sudo systemctl start mariadb"
 alias dbstatus="sudo systemctl status mariadb"
 alias dbstop="sudo systemctl stop mariadb"
