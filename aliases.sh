@@ -10,6 +10,7 @@ alias csc="vi ~/common-logic.sh"
 alias csf="csc"
 alias csb="vi ~/.bashrc"
 alias csz="vi ~/.zshrc"
+alias settings="vi ~/.zshrc"
 alias t="tmux -u"
 
 alias chrome="google-chrome"
