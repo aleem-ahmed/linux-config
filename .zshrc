@@ -109,3 +109,10 @@ alias src="source ~/.zshrc && tmux source-file ~/.tmux.conf"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# bun completions
+[ -s "/home/harpoon/.bun/_bun" ] && source "/home/harpoon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
