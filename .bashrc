@@ -106,4 +106,4 @@ parse_git_branch() {
 }
 
 # Time format
-# %l:%M:%S %p [%Y/%m/%d]
+#%Y %h %d %I:%M:%S %p
