@@ -17,4 +17,7 @@
 !.config/nvim
 !.config/nvim/**
 !.zshrc
+!initialize_cinnamon_widgets.sh
+!set_calendar_format.py
+!set_grouped_window_list.py
 
