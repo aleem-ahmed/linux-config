@@ -25,24 +25,6 @@ if ! command -v python3 >/dev/null 2>&1; then
   exit 1
 fi
 
-CALENDAR_SCRIPT="$SCRIPT_DIR/set_calendar_format.py"
-
-if [ -f "$CALENDAR_SCRIPT" ]; then
-    python3 "$CALENDAR_SCRIPT" "$@"
-else
-    echo "Error: can't find $CALENDAR_SCRIPT" >&2
-    exit 1
-fi
-
-WINDOW_LIST_SCRIPT="$SCRIPT_DIR/set_grouped_window_list.py"
-
-if [ -f "$WINDOW_LIST_SCRIPT" ]; then
-    python3 "$WINDOW_LIST_SCRIPT"
-else
-    echo "Error: can't find $WINDOW_LIST_SCRIPT" >&2
-    exit 1
-fi
-
 SET_GNOME_TERMINAL_FONT="$SCRIPT_DIR/set_gnome_terminal_font.py"
 
 if [ -f "$SET_GNOME_TERMINAL_FONT" ]; then
@@ -66,5 +48,23 @@ if [ -f "$SET_GNOME_TERMINAL_TRANSPARENCY" ]; then
     python3 "$SET_GNOME_TERMINAL_TRANSPARENCY"
 else
     echo "Error: can't find $SET_GNOME_TERMINAL_TRANSPARENCY" >&2
+    exit 1
+fi
+
+CALENDAR_SCRIPT="$SCRIPT_DIR/set_calendar_format.py"
+
+if [ -f "$CALENDAR_SCRIPT" ]; then
+    python3 "$CALENDAR_SCRIPT" "$@"
+else
+    echo "Error: can't find $CALENDAR_SCRIPT" >&2
+    exit 1
+fi
+
+WINDOW_LIST_SCRIPT="$SCRIPT_DIR/set_grouped_window_list.py"
+
+if [ -f "$WINDOW_LIST_SCRIPT" ]; then
+    python3 "$WINDOW_LIST_SCRIPT"
+else
+    echo "Error: can't find $WINDOW_LIST_SCRIPT" >&2
     exit 1
 fi
