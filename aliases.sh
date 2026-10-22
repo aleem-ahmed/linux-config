@@ -101,5 +101,4 @@ alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
 
-# Time Format
-# %Y-%m-%d %H:%M:%S
+alias zed="zeditor"
