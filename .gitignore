@@ -17,7 +17,7 @@
 !.config/nvim
 !.config/nvim/**
 !.zshrc
-!initialize_cinnamon_widgets.sh
+!initialize_cinnamon.sh
 !set_calendar_format.py
 !set_grouped_window_list.py
 !set_gnome_terminal_font.py

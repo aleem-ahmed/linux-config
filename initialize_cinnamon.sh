@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+gsettings set org.cinnamon workspace-expo-view-as-grid true
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Ensure that python3 is installed
