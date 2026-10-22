@@ -4,7 +4,7 @@ import shutil
 import sys
 from pathlib import Path
 
-FORMAT = sys.argv[1] if len(sys.argv) > 1 else "%a %b %e, %H:%M"
+FORMAT = sys.argv[1] if len(sys.argv) > 1 else "%Y %b %e %I:%M:%S %p"
 CONFIG_DIR = Path.home() / ".config/cinnamon/spices/calendar@cinnamon.org"
 
 files = sorted(CONFIG_DIR.glob("*.json"))
