@@ -2,6 +2,7 @@
 set -euo pipefail
 
 gsettings set org.cinnamon workspace-expo-view-as-grid true
+gsettings set org.nemo.preferences show-hidden-files true
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
