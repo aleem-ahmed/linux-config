@@ -15,11 +15,17 @@
 !.face
 !.config
 !.config/nvim
-!.config/nvim/**
 !.zshrc
+
+# Initializing Cinnamon
 !initialize_cinnamon.sh
 !set_calendar_format.py
 !set_grouped_window_list.py
 !set_gnome_terminal_font.py
 !set_gnome_terminal_theme_dracula.py
 !set_gnome_terminal_transparency.py
+
+# Hyprland
+!.config/hypr
+!.config/hypr/**
+

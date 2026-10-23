@@ -66,7 +66,7 @@ alias gstatus="git status"
 alias grepb="git branch -r | grep $1"
 
 # Vim alias
-alias vi="vi -u ~/.vimrc"
+
 
 # Grep alias
 alias grep2="find --type f | xargs grep -e $1 -l | xargs grep -e $2 -l"

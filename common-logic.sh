@@ -2,7 +2,7 @@
 if ! command -v nvim &> /dev/null; then
     echo "[zsh] Command 'nvim' not found. Please run 'sudo apt install neovim'"
 else
-	#alias vi="nvim"
+	alias vi="nvim"
 fi
 
 # Functions
