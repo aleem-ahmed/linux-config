@@ -28,4 +28,6 @@
 # Hyprland
 !.config/hypr
 !.config/hypr/**
+!.config/waybar
+!.config/waybar/**
 
