@@ -45,15 +45,6 @@ else
     exit 1
 fi
 
-SET_GNOME_TERMINAL_TRANSPARENCY="$SCRIPT_DIR/set_gnome_terminal_transparency.py"
-
-if [ -f "$SET_GNOME_TERMINAL_TRANSPARENCY" ]; then
-    python3 "$SET_GNOME_TERMINAL_TRANSPARENCY"
-else
-    echo "Error: can't find $SET_GNOME_TERMINAL_TRANSPARENCY" >&2
-    exit 1
-fi
-
 CALENDAR_SCRIPT="$SCRIPT_DIR/set_calendar_format.py"
 
 if [ -f "$CALENDAR_SCRIPT" ]; then
@@ -69,5 +60,14 @@ if [ -f "$WINDOW_LIST_SCRIPT" ]; then
     python3 "$WINDOW_LIST_SCRIPT"
 else
     echo "Error: can't find $WINDOW_LIST_SCRIPT" >&2
+    exit 1
+fi
+
+SET_GNOME_TERMINAL_TRANSPARENCY="$SCRIPT_DIR/set_gnome_terminal_transparency.py"
+
+if [ -f "$SET_GNOME_TERMINAL_TRANSPARENCY" ]; then
+    python3 "$SET_GNOME_TERMINAL_TRANSPARENCY"
+else
+    echo "Error: can't find $SET_GNOME_TERMINAL_TRANSPARENCY" >&2
     exit 1
 fi
