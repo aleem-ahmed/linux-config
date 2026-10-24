@@ -1,4 +1,5 @@
 # Aliases
+alias vi="vim"
 alias cls="clear"
 alias ls="ls --group-directories-first -A --color='auto'"
 alias ll="ls --group-directories-first -alFA --color='auto'"
