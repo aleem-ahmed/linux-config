@@ -2,23 +2,15 @@
 . "$HOME/.cargo/env"
 
 # History settings
-HISTCONTROL=ignoreboth    # Avoid duplicates in history
-shopt -s histappend       # Append to history file
-shopt -s checkwinsize     # Check window size after each command
+HISTCONTROL=ignoreboth # Avoid duplicates in history
+shopt -s histappend # Append to history file
+shopt -s checkwinsize # Check window size after each command
 
 # History length
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-
 source ~/install-zsh.sh
-source ~/exports.sh
-source ~/aliases.sh
-source ~/common-logic.sh
-
-
-alias src="source ~/.bashrc && tmux source-file ~/.tmux.conf"
-
 
 # If not running interactively, don't do anything
 case $- in
@@ -88,18 +80,6 @@ else
 fi
 
 unset color_prompt force_color_prompt
-
-colors() {
-	for x in {0..8}; do
-		for i in {30..37}; do
-			for a in {40..47}; do
-				echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
-			done
-			echo
-		done
-	done
-	echo ""
-}
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
