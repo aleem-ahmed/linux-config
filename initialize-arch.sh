@@ -6,10 +6,13 @@ echo "Installing yay.."
 
 # --- Linux Mint themes (Cinnamon) ---
 echo "==> Installing Mint themes and icons..."
-sudo pacman -S --needed --noconfirm cinnamon mint-themes mint-y-icons mint-x-icons
+sudo pacman -S --needed --noconfirm cinnamon
 
-if command -v yay >/dev/null 2>&1; then
-    yay -S --needed --noconfirm mint-l-theme mint-l-icons
-else
-    echo "WARNING: yay not found, skipping Mint-L theme (AUR)." >&2
-fi
+yay -S --needed --noconfirm \
+    mint-themes-git \
+    mint-y-icons-git \
+    mint-x-icons
+
+# Mint-L: the AUR tarballs are currently 404ing upstream; don't let it kill the script
+yay -S --needed --noconfirm mint-l-theme mint-l-icons \
+    || echo "WARNING: Mint-L failed to build (upstream source 404), skipping." >&2
