@@ -34,3 +34,7 @@
 !.config/hypr/**
 !.config/waybar
 !.config/waybar/**
+
+!.config/zed
+!.config/zed/**
+
