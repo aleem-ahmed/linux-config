@@ -1,8 +1,10 @@
 # Software check
+if ! command -v vim &> /dev/null; then
+    echo "[zsh] Command 'vim' not found. Please run 'sudo apt install vim'"
+fi
+
 if ! command -v nvim &> /dev/null; then
     echo "[zsh] Command 'nvim' not found. Please run 'sudo apt install neovim'"
-else
-	alias vi="nvim"
 fi
 
 # Functions
