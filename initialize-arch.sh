@@ -1,5 +1,5 @@
 echo "Initializing Arch Linux.."
 
-echo "Installing yay"
+echo "Installing yay.."
 
 ./install-yay.sh
