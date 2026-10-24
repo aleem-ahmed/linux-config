@@ -1,10 +1,36 @@
 # Software check
 if ! command -v vim &> /dev/null; then
-    echo "[zsh] Command 'vim' not found. Please run 'sudo apt install vim'"
+	# If package manager is pacman
+    if command -v pacman >/dev/null 2>&1; then
+        cmd="sudo pacman -S vim"
+    # If package manager is apt
+    elif command -v apt >/dev/null 2>&1; then
+        cmd="sudo apt install vim"
+    # If package manager is dnf
+    elif command -v dnf >/dev/null 2>&1; then
+        cmd="sudo dnf install vim"
+    else
+        cmd="your distro's package manager to install python3"
+    fi
+
+    echo "[zsh] Command 'vim' not found. Please run '$cmd'"
 fi
 
 if ! command -v nvim &> /dev/null; then
-    echo "[zsh] Command 'nvim' not found. Please run 'sudo apt install neovim'"
+	# If package manager is pacman
+    if command -v pacman >/dev/null 2>&1; then
+        cmd="sudo pacman -S neovim"
+    # If package manager is apt
+    elif command -v apt >/dev/null 2>&1; then
+        cmd="sudo apt install neovim"
+    # If package manager is dnf
+    elif command -v dnf >/dev/null 2>&1; then
+        cmd="sudo dnf install neovim"
+    else
+        cmd="your distro's package manager to install python3"
+    fi
+
+    echo "[zsh] Command 'nvim' not found. Please run '$cmd'"
 fi
 
 # Functions
