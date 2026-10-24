@@ -18,7 +18,8 @@
 !.zshrc
 
 # Initializing Cinnamon
-!initialize_cinnamon.sh
+!initialize-arch.sh
+!initialize-cinnamon.sh
 !set_calendar_format.py
 !set_grouped_window_list.py
 !set_gnome_terminal_font.py
@@ -30,4 +31,3 @@
 !.config/hypr/**
 !.config/waybar
 !.config/waybar/**
-
