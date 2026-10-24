@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "hard_tabs": true,
+  "buffer_font_features": {
+    "calt": false
+  },
   "cli_default_open_behavior": "existing_window",
   "agent": {
     "dock": "right",
