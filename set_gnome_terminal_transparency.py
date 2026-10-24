@@ -60,10 +60,20 @@ if __name__ == "__main__":
         explain_missing_support()
 
     if "use-theme-transparency" in keys:
-        subprocess.run(["gsettings", "set", schema, "use-theme-transparency", "false"],
-                       check=True)
-    subprocess.run(["gsettings", "set", schema, "use-transparent-background", "true"],
-                   check=True)
-    subprocess.run(["gsettings", "set", schema, "background-transparency-percent",
-                    str(TRANSPARENCY_PERCENT)], check=True)
+        subprocess.run(
+            ["gsettings", "set", schema, "use-theme-transparency", "false"],
+            check=True
+        )
+
+    subprocess.run(
+        ["gsettings", "set", schema, "use-transparent-background", "true"],
+        check=True
+    )
+
+    subprocess.run(
+        ["gsettings", "set", schema, "background-transparency-percent",
+        str(TRANSPARENCY_PERCENT)],
+        check=True
+    )
+
     print(f"GNOME Terminal background transparency set to {TRANSPARENCY_PERCENT}%.")
