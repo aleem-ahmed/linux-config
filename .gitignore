@@ -1,4 +1,4 @@
-# [ignore-everything]
+# Ignore Everything
 *
 
 # Self
@@ -18,15 +18,6 @@
 !install-zsh.sh
 !install-oh-my-zsh.sh
 
-# tmux
-!.tmux.conf
-
-# vim
-!.vimrc
-
-# nvim
-!.config/nvim
-
 # Initialize Arch Linux
 !install-yay.sh
 
@@ -43,6 +34,15 @@
 !.config/hypr/**
 !.config/waybar
 !.config/waybar/**
+
+# tmux
+!.tmux.conf
+
+# vim
+!.vimrc
+
+# nvim
+!.config/nvim
 
 # Zed
 !.config/zed
