@@ -90,9 +90,9 @@ fi
 unset color_prompt force_color_prompt
 
 colors() {
-	for x in {0..8}; do 
-		for i in {30..37}; do 
-			for a in {40..47}; do 
+	for x in {0..8}; do
+		for i in {30..37}; do
+			for a in {40..47}; do
 				echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
 			done
 			echo
@@ -104,6 +104,3 @@ colors() {
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
-# Time format
-#%Y %h %d %I:%M:%S %p

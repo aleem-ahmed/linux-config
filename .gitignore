@@ -17,6 +17,9 @@
 !.config/nvim
 !.zshrc
 
+# Initialize Arch Linux
+!install-yay.sh
+
 # Initializing Cinnamon
 !initialize-arch.sh
 !initialize-cinnamon.sh
