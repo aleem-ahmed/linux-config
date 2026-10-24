@@ -9,23 +9,23 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # Ensure that python3 is installed
 if ! command -v python3 >/dev/null 2>&1; then
     # If package manager is pacman
-  if command -v pacman >/dev/null 2>&1; then
-    cmd="sudo pacman -S python"
+    if command -v pacman >/dev/null 2>&1; then
+        cmd="sudo pacman -S python"
     # If package manager is apt
-  elif command -v apt >/dev/null 2>&1; then
-    cmd="sudo apt install python3"
-  # If package manager is dnf
-  elif command -v dnf >/dev/null 2>&1; then
-    cmd="sudo dnf install python3"
-  else
-    cmd="your distro's package manager to install python3"
-  fi
+    elif command -v apt >/dev/null 2>&1; then
+        cmd="sudo apt install python3"
+    # If package manager is dnf
+    elif command -v dnf >/dev/null 2>&1; then
+        cmd="sudo dnf install python3"
+    else
+        cmd="your distro's package manager to install python3"
+    fi
 
-  echo "Error: Python 3 is not installed." >&2
+    echo "Error: Python 3 is not installed." >&2
 
-  echo "Install it with: $cmd" >&2
+    echo "Install it with: $cmd" >&2
 
-  exit 1
+    exit 1
 fi
 
 SET_GNOME_TERMINAL_FONT="$SCRIPT_DIR/set_gnome_terminal_font.py"
