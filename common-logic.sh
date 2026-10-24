@@ -10,7 +10,7 @@ if ! command -v vim &> /dev/null; then
     elif command -v dnf >/dev/null 2>&1; then
         cmd="sudo dnf install vim"
     else
-        cmd="your distro's package manager to install python3"
+        cmd="your distro's package manager to install vim"
     fi
 
     echo "[zsh] Command 'vim' not found. Please run '$cmd'"
@@ -27,7 +27,7 @@ if ! command -v nvim &> /dev/null; then
     elif command -v dnf >/dev/null 2>&1; then
         cmd="sudo dnf install neovim"
     else
-        cmd="your distro's package manager to install python3"
+        cmd="your distro's package manager to install neovim"
     fi
 
     echo "[zsh] Command 'nvim' not found. Please run '$cmd'"
