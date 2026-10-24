@@ -36,6 +36,7 @@ else
     echo "Error: can't find $SET_GNOME_TERMINAL_FONT" >&2
     exit 1
 fi
+
 SET_GNOME_TERMINAL_THEME_DRACULA="$SCRIPT_DIR/set_gnome_terminal_theme_dracula.py"
 
 if [ -f "$SET_GNOME_TERMINAL_THEME_DRACULA" ]; then
