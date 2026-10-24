@@ -1,5 +1,12 @@
 echo "Initializing Arch Linux.."
 
+# --- Pacman easter egg ---
+echo "==> Enabling ILoveCandy in pacman.conf..."
+
+if ! grep -q '^ILoveCandy' /etc/pacman.conf; then
+	sudo sed -i '/^\[options\]/a ILoveCandy' /etc/pacman.conf
+fi
+
 echo "Installing yay.."
 
 ./install-yay.sh
@@ -9,10 +16,10 @@ echo "==> Installing Mint themes and icons..."
 sudo pacman -S --needed --noconfirm cinnamon
 
 yay -S --needed --noconfirm \
-    mint-themes-git \
-    mint-y-icons \
-    mint-x-icons
+	mint-themes-git \
+	mint-y-icons \
+	mint-x-icons
 
 # Mint-L: the AUR tarballs are currently 404ing upstream; don't let it kill the script
 yay -S --needed --noconfirm mint-l-theme mint-l-icons \
-    || echo "WARNING: Mint-L failed to build (upstream source 404), skipping." >&2
+	|| echo "WARNING: Mint-L failed to build (upstream source 404), skipping." >&2
