@@ -1,0 +1,40 @@
+# [ignore-everything]
+*
+
+# Dont Ignore
+!README.md
+!aliases.sh
+!common-logic.sh
+!exports.sh
+!install-zsh.sh
+!install-oh-my-zsh.sh
+!.bashrc
+!.gitignore
+!.tmux.conf
+!.vimrc
+!.face
+!.config
+!.config/nvim
+!.zshrc
+
+# Initialize Arch Linux
+!install-yay.sh
+
+# Initializing Cinnamon
+!initialize-arch.sh
+!initialize-cinnamon.sh
+!set_calendar_format.py
+!set_grouped_window_list.py
+!set_gnome_terminal_font.py
+!set_gnome_terminal_theme_dracula.py
+!set_gnome_terminal_transparency.py
+
+# Hyprland
+!.config/hypr
+!.config/hypr/**
+!.config/waybar
+!.config/waybar/**
+
+!.config/zed
+!.config/zed/**
+
