@@ -10,7 +10,7 @@ sudo pacman -S --needed --noconfirm cinnamon
 
 yay -S --needed --noconfirm \
     mint-themes-git \
-    mint-y-icons-git \
+    mint-y-icons \
     mint-x-icons
 
 # Mint-L: the AUR tarballs are currently 404ing upstream; don't let it kill the script
