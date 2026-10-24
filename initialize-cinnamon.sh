@@ -28,25 +28,7 @@ if ! command -v python3 >/dev/null 2>&1; then
     exit 1
 fi
 
-SET_GNOME_TERMINAL_FONT="$SCRIPT_DIR/set_gnome_terminal_font.py"
-
-if [ -f "$SET_GNOME_TERMINAL_FONT" ]; then
-    python3 "$SET_GNOME_TERMINAL_FONT"
-else
-    echo "Error: can't find $SET_GNOME_TERMINAL_FONT" >&2
-    exit 1
-fi
-
-SET_GNOME_TERMINAL_THEME_DRACULA="$SCRIPT_DIR/set_gnome_terminal_theme_dracula.py"
-
-if [ -f "$SET_GNOME_TERMINAL_THEME_DRACULA" ]; then
-    python3 "$SET_GNOME_TERMINAL_THEME_DRACULA"
-else
-    echo "Error: can't find $SET_GNOME_TERMINAL_THEME_DRACULA" >&2
-    exit 1
-fi
-
-CALENDAR_SCRIPT="$SCRIPT_DIR/set_calendar_format.py"
+CALENDAR_SCRIPT="$SCRIPT_DIR/cinnamon-widget/set_calendar_format.py"
 
 if [ -f "$CALENDAR_SCRIPT" ]; then
     python3 "$CALENDAR_SCRIPT" "$@"
@@ -55,7 +37,7 @@ else
     exit 1
 fi
 
-WINDOW_LIST_SCRIPT="$SCRIPT_DIR/set_grouped_window_list.py"
+WINDOW_LIST_SCRIPT="$SCRIPT_DIR/cinnamon-widget/set_grouped_window_list.py"
 
 if [ -f "$WINDOW_LIST_SCRIPT" ]; then
     python3 "$WINDOW_LIST_SCRIPT"
@@ -64,7 +46,25 @@ else
     exit 1
 fi
 
-SET_GNOME_TERMINAL_TRANSPARENCY="$SCRIPT_DIR/set_gnome_terminal_transparency.py"
+SET_GNOME_TERMINAL_FONT="$SCRIPT_DIR/gnome-terminal/set_gnome_terminal_font.py"
+
+if [ -f "$SET_GNOME_TERMINAL_FONT" ]; then
+    python3 "$SET_GNOME_TERMINAL_FONT"
+else
+    echo "Error: can't find $SET_GNOME_TERMINAL_FONT" >&2
+    exit 1
+fi
+
+SET_GNOME_TERMINAL_THEME_DRACULA="$SCRIPT_DIR/gnome-terminal/set_gnome_terminal_theme_dracula.py"
+
+if [ -f "$SET_GNOME_TERMINAL_THEME_DRACULA" ]; then
+    python3 "$SET_GNOME_TERMINAL_THEME_DRACULA"
+else
+    echo "Error: can't find $SET_GNOME_TERMINAL_THEME_DRACULA" >&2
+    exit 1
+fi
+
+SET_GNOME_TERMINAL_TRANSPARENCY="$SCRIPT_DIR/gnome-terminal/set_gnome_terminal_transparency.py"
 
 if [ -f "$SET_GNOME_TERMINAL_TRANSPARENCY" ]; then
     python3 "$SET_GNOME_TERMINAL_TRANSPARENCY"
