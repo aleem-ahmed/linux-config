@@ -12,9 +12,19 @@ hl.monitor({
 	scale = "auto",
 })
 
-hl.monitor({ output = "desc:Dell Inc. DELL P2319H 7QNCTS2", mode = "preferred", position = "0x0", scale = 1 })
+hl.monitor({
+	output = "desc:Dell Inc. DELL P2319H 7QNCTS2",
+	mode = "preferred",
+	position = "0x0",
+	scale = 1
+})
 
-hl.monitor({ output = "desc:Dell Inc. DELL P2319H BNNCTS2", mode = "preferred", position = "1920x0", scale = 1 })
+hl.monitor({
+	output = "desc:Dell Inc. DELL P2319H BNNCTS2",
+	mode = "preferred",
+	position = "1920x0",
+	scale = 1
+})
 
 ---------------------
 ---- MY PROGRAMS ----
