@@ -100,3 +100,6 @@ alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
 
 alias zed="zeditor"
+
+# Hyprland
+alias harpoon="cat ~/.config/hypr/README.md"
