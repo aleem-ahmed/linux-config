@@ -103,6 +103,7 @@ Config files open in `$EDITOR`, falling back to nvim. Change `EDITOR_CMD` at the
 | Super + Tab / Shift + Tab | Next / previous workspace |
 | Super + Ctrl + Tab | Last-used workspace |
 | Ctrl + Alt + ← / → | Previous / next workspace |
+| Ctrl + Alt + Shift + ← / → | Take window to previous / next workspace |
 | Super + Scroll | Cycle workspaces |
 | Super + Shift + Alt + ← / → | Send workspace to other monitor |
 | Super + S | Show or hide the scratchpad |

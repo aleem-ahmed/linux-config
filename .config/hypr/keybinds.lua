@@ -110,6 +110,10 @@ hl.bind(mod .. " + CTRL + tab", hl.dsp.focus({ workspace = "previous" }))
 -- r-1 / r+1: step through every number on this monitor, empty ones included
 hl.bind("CTRL + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
 hl.bind("CTRL + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
+
+-- Cinnamon-style: take the focused window with you to the previous / next workspace
+hl.bind("CTRL + ALT + SHIFT + left", hl.dsp.window.move({ workspace = "r-1", follow = true }))
+hl.bind("CTRL + ALT + SHIFT + right", hl.dsp.window.move({ workspace = "r+1", follow = true }))
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
