@@ -29,8 +29,25 @@ if ! command -v nvim &> /dev/null; then
     else
         cmd="your distro's package manager to install neovim"
     fi
-
+q
     echo "[zsh] Command 'nvim' not found. Please run '$cmd'"
+fi
+
+if ! command -v glow &> /dev/null; then
+	# If package manager is pacman
+    if command -v pacman >/dev/null 2>&1; then
+        cmd="sudo pacman -S glow"
+    # If package manager is apt
+    elif command -v apt >/dev/null 2>&1; then
+        cmd="sudo apt install glow"
+    # If package manager is dnf
+    elif command -v dnf >/dev/null 2>&1; then
+        cmd="sudo dnf install glow"
+    else
+        cmd="your distro's package manager to install glow"
+    fi
+
+    echo "[zsh] Command 'glow' not found. Please run '$cmd'"
 fi
 
 # Functions
@@ -50,6 +67,4 @@ colors()
 			echo
 		done
 	done
-
-	echo ""
 }
