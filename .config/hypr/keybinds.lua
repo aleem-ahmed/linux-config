@@ -31,8 +31,9 @@ hl.bind(mod .. " + space", hl.dsp.exec_cmd(launcher))
 hl.bind(mod .. " + escape", hl.dsp.exec_cmd(scripts .. "/powermenu.sh"))
 hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd("hyprlock"))
 
--- Omarchy menu (Super + Alt + Space): uncomment once you have a menu script
--- hl.bind(mod .. " + ALT + space", hl.dsp.exec_cmd(scripts .. "/menu.sh"))
+-- Control menu, plus a shortcut straight to its Capture section
+hl.bind(mod .. " + ALT + space", hl.dsp.exec_cmd(scripts .. "/menu.sh"))
+hl.bind(mod .. " + CTRL + C", hl.dsp.exec_cmd(scripts .. "/menu.sh capture"))
 
 -- TUI tools (bluetui, impala, btop)
 hl.bind(mod .. " + CTRL + B", in_terminal("bluetui"))
