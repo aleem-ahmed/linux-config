@@ -13,6 +13,7 @@ per-machine settings live in `hosts/`.
 │   └── l33t.lua        # Machine-specific: monitors, NVIDIA env vars
 └── scripts/
     ├── menu.sh         # Super + Alt + Space control menu
+    ├── keybinds-help.sh # Super + K shortcut search (reads this README)
     └── powermenu.sh    # Super + Escape system menu
 ```
 
@@ -62,6 +63,7 @@ Config files open in `$EDITOR`, falling back to nvim. Change `EDITOR_CMD` at the
 | Super + Space | App launcher |
 | Super + Alt + Space | Control menu |
 | Super + Ctrl + C | Capture menu |
+| Super + K | Search all shortcuts |
 | Super + Escape | Power menu |
 | Super + Ctrl + L | Lock screen |
 | Super + Ctrl + B / W / T | Bluetooth / Wi-Fi / btop |
@@ -100,6 +102,7 @@ Config files open in `$EDITOR`, falling back to nvim. Change `EDITOR_CMD` at the
 | Super + Shift + Alt + 1–0 | Move window there, stay put |
 | Super + Tab / Shift + Tab | Next / previous workspace |
 | Super + Ctrl + Tab | Last-used workspace |
+| Ctrl + Alt + ← / → | Previous / next workspace |
 | Super + Scroll | Cycle workspaces |
 | Super + Shift + Alt + ← / → | Send workspace to other monitor |
 | Super + S | Show or hide the scratchpad |

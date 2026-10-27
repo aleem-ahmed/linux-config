@@ -29,6 +29,9 @@ hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mod .. " + ALT + space", hl.dsp.exec_cmd(scripts .. "/menu.sh"))
 hl.bind(mod .. " + CTRL + C", hl.dsp.exec_cmd(scripts .. "/menu.sh capture"))
 
+-- Searchable list of every shortcut (reads README.md)
+hl.bind(mod .. " + K", hl.dsp.exec_cmd(scripts .. "/keybinds-help.sh"))
+
 -- TUI tools (bluetui, impala, btop)
 hl.bind(mod .. " + CTRL + B", in_terminal("bluetui"))
 hl.bind(mod .. " + CTRL + W", in_terminal("impala"))
@@ -104,6 +107,8 @@ end
 hl.bind(mod .. " + tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + SHIFT + tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mod .. " + CTRL + tab", hl.dsp.focus({ workspace = "previous" }))
+hl.bind("CTRL + ALT + left", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("CTRL + ALT + right", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
