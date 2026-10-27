@@ -68,3 +68,7 @@ colors()
 		done
 	done
 }
+
+play() {
+	yt-dlp -q -f bestaudio -o - "ytsearch:$*" | mpv --no-video -
+}
