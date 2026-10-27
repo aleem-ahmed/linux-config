@@ -64,10 +64,11 @@ end
 
 -- Resize: Super + minus/equal (width), Super + Shift + minus/equal (height)
 local held = { repeating = true }
-hl.bind(mod .. " + minus", hl.dsp.window.resize({ x = -100, y = 0 }), held)
-hl.bind(mod .. " + equal", hl.dsp.window.resize({ x = 100, y = 0 }), held)
-hl.bind(mod .. " + SHIFT + minus", hl.dsp.window.resize({ x = 0, y = -100 }), held)
-hl.bind(mod .. " + SHIFT + equal", hl.dsp.window.resize({ x = 0, y = 100 }), held)
+-- code:20 = minus, code:21 = equal (same keycodes Omarchy uses)
+hl.bind(mod .. " + code:20", hl.dsp.window.resize({ x = -100, y = 0, relative = true }), held)
+hl.bind(mod .. " + code:21", hl.dsp.window.resize({ x = 100, y = 0, relative = true }), held)
+hl.bind(mod .. " + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), held)
+hl.bind(mod .. " + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 100, relative = true }), held)
 
 -- Mouse: drag to move, right-drag to resize
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
