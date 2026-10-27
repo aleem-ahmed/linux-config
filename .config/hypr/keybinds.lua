@@ -107,8 +107,9 @@ end
 hl.bind(mod .. " + tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + SHIFT + tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mod .. " + CTRL + tab", hl.dsp.focus({ workspace = "previous" }))
-hl.bind("CTRL + ALT + left", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind("CTRL + ALT + right", hl.dsp.focus({ workspace = "e+1" }))
+-- r-1 / r+1: step through every number on this monitor, empty ones included
+hl.bind("CTRL + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind("CTRL + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
