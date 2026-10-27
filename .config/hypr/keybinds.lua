@@ -10,12 +10,6 @@ local launcher = "wofi --show drun"
 local scripts = os.getenv("HOME") .. "/.config/hypr/scripts"
 
 
--- Dispatchers without a known Lua wrapper go through hyprctl
-local function dispatch(cmd)
-	return hl.dsp.exec_cmd("hyprctl dispatch " .. cmd)
-end
-
-
 local function in_terminal(cmd)
 	return hl.dsp.exec_cmd(terminal .. " -- " .. cmd)
 end
@@ -47,34 +41,33 @@ hl.bind(mod .. " + SHIFT + space", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
 ---- WINDOWS ----
 -------------------
 hl.bind(mod .. " + W", hl.dsp.window.close())
-hl.bind("CTRL + ALT + delete", hl.dsp.exec_cmd("hyprctl clients -j | jq -r '.[].address' "
-	.. "| xargs -I{} hyprctl dispatch closewindow address:{}"))
+hl.bind(
+	"CTRL + ALT + delete",
+	hl.dsp.exec_cmd(
+		"hyprctl clients -j | jq -r '.[].address' "
+			.. "| xargs -I{} hyprctl dispatch 'hl.dsp.window.close({ window = \"address:{}\" })'"
+	)
+)
 hl.bind(mod .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mod .. " + ALT + F", dispatch("fullscreen 1"))
+hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mod .. " + ALT + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mod .. " + J", hl.dsp.layout("togglesplit"))
-hl.bind(mod .. " + backspace", dispatch("setprop active opaque toggle"))
 
--- Focus and swap with arrows
-local arrows = {
-	left = "l",
-	right = "r",
-	up = "u",
-	down = "d",
-}
+-- Focus and move with arrows
+local arrows = { "left", "right", "up", "down" }
 
-for key, dir in pairs(arrows) do
-	hl.bind(mod .. " + " .. key, dispatch("movefocus " .. dir))
-	hl.bind(mod .. " + SHIFT + " .. key, dispatch("swapwindow " .. dir))
+for _, dir in ipairs(arrows) do
+	hl.bind(mod .. " + " .. dir, hl.dsp.focus({ direction = dir }))
+	hl.bind(mod .. " + SHIFT + " .. dir, hl.dsp.window.move({ direction = dir }))
 end
 
 -- Resize: Super + minus/equal (width), Super + Shift + minus/equal (height)
 local held = { repeating = true }
-hl.bind(mod .. " + minus", dispatch("resizeactive -100 0"), held)
-hl.bind(mod .. " + equal", dispatch("resizeactive 100 0"), held)
-hl.bind(mod .. " + SHIFT + minus", dispatch("resizeactive 0 -100"), held)
-hl.bind(mod .. " + SHIFT + equal", dispatch("resizeactive 0 100"), held)
+hl.bind(mod .. " + minus", hl.dsp.window.resize({ x = -100, y = 0 }), held)
+hl.bind(mod .. " + equal", hl.dsp.window.resize({ x = 100, y = 0 }), held)
+hl.bind(mod .. " + SHIFT + minus", hl.dsp.window.resize({ x = 0, y = -100 }), held)
+hl.bind(mod .. " + SHIFT + equal", hl.dsp.window.resize({ x = 0, y = 100 }), held)
 
 -- Mouse: drag to move, right-drag to resize
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
@@ -83,14 +76,14 @@ hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 ------------------
 ---- GROUPS ----
 ------------------
-hl.bind(mod .. " + G", dispatch("togglegroup"))
-hl.bind(mod .. " + ALT + G", dispatch("moveoutofgroup"))
-hl.bind(mod .. " + ALT + tab", dispatch("changegroupactive f"))
-hl.bind(mod .. " + CTRL + left", dispatch("changegroupactive b"))
-hl.bind(mod .. " + CTRL + right", dispatch("changegroupactive f"))
+hl.bind(mod .. " + G", hl.dsp.group.toggle())
+hl.bind(mod .. " + ALT + G", hl.dsp.window.move({ out_of_group = true }))
+hl.bind(mod .. " + ALT + tab", hl.dsp.group.next())
+hl.bind(mod .. " + CTRL + left", hl.dsp.group.prev())
+hl.bind(mod .. " + CTRL + right", hl.dsp.group.next())
 
-for key, dir in pairs(arrows) do
-	hl.bind(mod .. " + ALT + " .. key, dispatch("moveintogroup " .. dir))
+for _, dir in ipairs(arrows) do
+	hl.bind(mod .. " + ALT + " .. dir, hl.dsp.window.move({ into_group = dir }))
 end
 
 ----------------------
@@ -103,23 +96,23 @@ for i = 1, 10 do
 	local key = i % 10
 
 	hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
-	hl.bind(mod .. " + SHIFT + ALT + " .. key, dispatch("movetoworkspacesilent " .. i))
+	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = true }))
+	hl.bind(mod .. " + SHIFT + ALT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 hl.bind(mod .. " + tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + SHIFT + tab", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mod .. " + CTRL + tab", dispatch("workspace previous"))
+hl.bind(mod .. " + CTRL + tab", hl.dsp.focus({ workspace = "previous" }))
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move the whole workspace to the other monitor
-hl.bind(mod .. " + SHIFT + ALT + left", dispatch("movecurrentworkspacetomonitor l"))
-hl.bind(mod .. " + SHIFT + ALT + right", dispatch("movecurrentworkspacetomonitor r"))
+hl.bind(mod .. " + SHIFT + ALT + left", hl.dsp.workspace.move({ monitor = "l" }))
+hl.bind(mod .. " + SHIFT + ALT + right", hl.dsp.workspace.move({ monitor = "r" }))
 
 -- Scratchpad
-hl.bind(mod .. " + S", dispatch("togglespecialworkspace scratchpad"))
-hl.bind(mod .. " + ALT + S", dispatch("movetoworkspacesilent special:scratchpad"))
+hl.bind(mod .. " + S", hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind(mod .. " + ALT + S", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
 
 -----------------------
 ---- SCREENSHOTS ----

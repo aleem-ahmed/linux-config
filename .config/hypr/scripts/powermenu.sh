@@ -6,7 +6,7 @@ choice=$(printf "Lock\nSuspend\nLog out\nRestart\nShut down" | wofi --dmenu --in
 case "$choice" in
 	"Lock") hyprlock ;;
 	"Suspend") systemctl suspend ;;
-	"Log out") hyprctl dispatch exit ;;
+	"Log out") hyprctl dispatch 'hl.dsp.exit()' ;;
 	"Restart") systemctl reboot ;;
 	"Shut down") systemctl poweroff ;;
 esac

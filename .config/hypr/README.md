@@ -77,9 +77,8 @@ Config files open in `$EDITOR`, falling back to nvim. Change `EDITOR_CMD` at the
 | Super + Alt + F | Maximize (keeps the bar) |
 | Super + P | Pseudo-tile |
 | Super + J | Flip split direction |
-| Super + Backspace | Toggle transparency |
 | Super + Arrows | Move focus |
-| Super + Shift + Arrows | Swap window |
+| Super + Shift + Arrows | Move window |
 | Super + − / = | Shrink / grow width |
 | Super + Shift + − / = | Shrink / grow height |
 | Super + Left drag | Move window |
