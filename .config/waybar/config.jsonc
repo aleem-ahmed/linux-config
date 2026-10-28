@@ -1,10 +1,10 @@
 // ~/.config/waybar/config.jsonc
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 32,
     "spacing": 6,
-    "margin-bottom": 6,
+    "margin-top": 6,
     "margin-left": 8,
     "margin-right": 8,
 
