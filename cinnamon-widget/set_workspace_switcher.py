@@ -6,7 +6,7 @@ import json
 import time
 from pathlib import Path
 
-from gi.repository import Gio
+from gi.repository import Gio # type: ignore
 
 
 UUID = "workspace-switcher@cinnamon.org"

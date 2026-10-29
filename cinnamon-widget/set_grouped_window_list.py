@@ -6,7 +6,7 @@ import shutil
 import time
 from pathlib import Path
 
-from gi.repository import Gio
+from gi.repository import Gio # type: ignore
 
 
 UUID = "grouped-window-list@cinnamon.org"
