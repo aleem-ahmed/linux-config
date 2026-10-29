@@ -28,12 +28,12 @@ if ! command -v python3 >/dev/null 2>&1; then
 	exit 1
 fi
 
-PANEL_SETUP_SCRIPT="$SCRIPT_DIR/cinnamon-widget/panel_setup.py"
+ADD_WIDGET_TO_PANEL_SCRIPT="$SCRIPT_DIR/cinnamon-widget/add_widgets_to_panel.py"
 
-if [ -f "$PANEL_SETUP_SCRIPT" ]; then
-	python3 "$PANEL_SETUP_SCRIPT"
+if [ -f "$ADD_WIDGET_TO_PANEL_SCRIPT" ]; then
+	python3 "$ADD_WIDGET_TO_PANEL_SCRIPT"
 else
-	echo "Error: can't find $PANEL_SETUP_SCRIPT" >&2
+	echo "Error: can't find $ADD_WIDGET_TO_PANEL_SCRIPT" >&2
 	exit 1
 fi
 
