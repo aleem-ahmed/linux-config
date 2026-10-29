@@ -46,6 +46,15 @@ else
     exit 1
 fi
 
+WORKSPACE_SWITCHER_SCRIPT="$SCRIPT_DIR/cinnamon-widget/set_workspace_switcher.py"
+
+if [ -f "$WORKSPACE_SWITCHER_SCRIPT" ]; then
+    python3 "$WORKSPACE_SWITCHER_SCRIPT"
+else
+    echo "Error: can't find $WORKSPACE_SWITCHER_SCRIPT" >&2
+    exit 1
+fi
+
 SET_GNOME_TERMINAL_FONT="$SCRIPT_DIR/gnome-terminal/set_gnome_terminal_font.py"
 
 if [ -f "$SET_GNOME_TERMINAL_FONT" ]; then
