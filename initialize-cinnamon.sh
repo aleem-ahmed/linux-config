@@ -28,7 +28,16 @@ if ! command -v python3 >/dev/null 2>&1; then
 	exit 1
 fi
 
-WINDOW_LIST_SCRIPT="$SCRIPT_DIR/cinnamon-widget/panel_setup.py"
+PANEL_SETUP_SCRIPT="$SCRIPT_DIR/cinnamon-widget/panel_setup.py"
+
+if [ -f "$PANEL_SETUP_SCRIPT" ]; then
+	python3 "$PANEL_SETUP_SCRIPT"
+else
+	echo "Error: can't find $PANEL_SETUP_SCRIPT" >&2
+	exit 1
+fi
+
+WINDOW_LIST_SCRIPT="$SCRIPT_DIR/cinnamon-widget/set_grouped_window_list.py"
 
 if [ -f "$WINDOW_LIST_SCRIPT" ]; then
 	python3 "$WINDOW_LIST_SCRIPT"
