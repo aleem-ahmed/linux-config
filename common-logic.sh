@@ -29,7 +29,7 @@ if ! command -v nvim &> /dev/null; then
     else
         cmd="your distro's package manager to install neovim"
     fi
-q
+
     echo "[zsh] Command 'nvim' not found. Please run '$cmd'"
 fi
 
@@ -72,3 +72,4 @@ colors()
 play() {
 	yt-dlp -q -f bestaudio -o - "ytsearch:$*" | mpv --no-video -
 }
+

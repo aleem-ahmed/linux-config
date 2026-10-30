@@ -105,19 +105,5 @@ alias zed="zeditor"
 if command -v glow &> /dev/null; then
 	alias harpoon="glow ~/.config/hypr/README.md"
 else
-	# If package manager is pacman
-	if command -v pacman >/dev/null 2>&1; then
-		cmd="sudo pacman -S glow"
-	# If package manager is apt
-	elif command -v apt >/dev/null 2>&1; then
-		cmd="sudo apt install glow"
-	# If package manager is dnf
-	elif command -v dnf >/dev/null 2>&1; then
-		cmd="sudo dnf install glow"
-	else
-		cmd="your distro's package manager to install glow"
-	fi
-
-	echo "[zsh] Command 'glow' not found. Please run '$cmd'"
 	alias harpoon="cat ~/.config/hypr/README.md"
 fi
