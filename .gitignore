@@ -26,6 +26,7 @@
 !cinnamon-widget/**
 !gnome-terminal
 !gnome-terminal/**
+!check-software-installed.sh
 !initialize-arch.py
 !initialize-cinnamon.py
 
