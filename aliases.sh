@@ -1,3 +1,11 @@
+source ~/detect-distro.sh
+
+if [[ "$DISTRO" == "arch" ]]; then
+	# arch-only stuff here
+	alias zed="zeditor"
+elif [[ "$DISTRO" == "mint" ]]; then
+fi
+
 # Aliases
 alias vi="vim"
 alias cls="clear"
@@ -98,8 +106,6 @@ alias w3="cd ~/Desktop/w3st-io"
 alias w3st="cd ~/Desktop/w3st-io/w3st.io"
 alias jjvinyls="cd ~/Desktop/w3st-io/jjvinyls"
 alias toheroku="cd ~/Desktop/heroku"
-
-alias zed="zeditor"
 
 # Hyprland
 if command -v glow &> /dev/null; then
