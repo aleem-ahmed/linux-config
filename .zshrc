@@ -75,7 +75,7 @@ ZSH_THEME="bira"
 plugins=(git)
 
 source ~/install-oh-my-zsh.sh
-source ~/check-software-installed.sh
+source ~/software-check.sh
 source ~/exports.sh
 source ~/aliases.sh
 source ~/common-logic.sh
