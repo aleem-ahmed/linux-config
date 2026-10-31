@@ -27,7 +27,7 @@
 !gnome-terminal
 !gnome-terminal/**
 !initialize-arch.py
-!initialize-cinnamon.sh
+!initialize-cinnamon.py
 
 # Hyprland
 !.config/hypr
