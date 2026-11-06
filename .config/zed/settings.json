@@ -7,33 +7,34 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "hard_tabs": true,
-  "buffer_font_features": {
-    "calt": false
-  },
-  "cli_default_open_behavior": "existing_window",
-  "agent": {
-    "dock": "right",
-    "threads_sidebar": {
-      "position": "right"
-    },
-    "favorite_models": [],
-    "model_parameters": []
-  },
-  "git_panel": {
-    "dock": "left"
-  },
-  "project_panel": {
-    "dock": "left"
-  },
-  "base_keymap": "VSCode",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "VSCode Dark Modern",
-  },
-  "show_wrap_guides": true,
-  "wrap_guides": [80, 120]
+	"agent": {
+		"dock": "right",
+		"favorite_models": [],
+		"model_parameters": [],
+		"threads_sidebar": {
+			"position": "right"
+		}
+	},
+	"base_keymap": "VSCode",
+	"buffer_font_features": {
+		"calt": false
+	},
+	"buffer_font_size": 15,
+	"cli_default_open_behavior": "existing_window",
+	"format_on_save": "off",
+	"git_panel": {
+		"dock": "left"
+	},
+	"hard_tabs": true,
+	"project_panel": {
+		"dock": "left"
+	},
+	"show_wrap_guides": true,
+	"theme": {
+		"dark": "VSCode Dark Modern",
+		"light": "One Light",
+		"mode": "dark"
+	},
+	"ui_font_size": 16,
+	"wrap_guides": [80, 120]
 }
