@@ -27,7 +27,6 @@ _require()
 _require python3 python python3 python3
 _require vim vim
 _require nvim neovim
-_require glow glow
 
 # Helpers aren't needed after startup, keep them out of your shell
 unfunction _require _pkg_install_cmd
