@@ -36,5 +36,20 @@
 		"mode": "dark"
 	},
 	"ui_font_size": 16,
-	"wrap_guides": [80, 120]
+	"wrap_guides": [80, 120],
+	"theme_overrides": {
+		"VSCode Dark Modern": {
+			"background.appearance": "transparent",
+			"background": "#1f1f1ff2",
+			"editor.background": "#00000000",
+			"editor.gutter.background": "#00000000",
+			"panel.background": "#00000000",
+			"tab_bar.background": "#00000000",
+			"tab.inactive_background": "#00000000",
+			"toolbar.background": "#00000000",
+			"terminal.background": "#00000000",
+			"title_bar.background": "#1f1f1ff2",
+						"status_bar.background": "#1f1f1ff2"
+		}
+	}
 }
