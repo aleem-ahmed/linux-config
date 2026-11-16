@@ -38,6 +38,9 @@
 !.config/waybar
 !.config/waybar/**
 
+!.config/gtk-3.0
+!.config/gtk-3.0/bookmarks
+
 # tmux
 !.tmux.conf
 
