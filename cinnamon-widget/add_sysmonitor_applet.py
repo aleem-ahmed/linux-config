@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install the System Monitor applet (sysmonitor@orcus), show only RAM, and put it first on the main panel's right."""
+"""Install the System Monitor applet (sysmonitor@orcus), show only RAM, and put it first on the right of every panel."""
 
 import ast
 import io
@@ -169,14 +169,14 @@ def write_config(schema_path, instance_id):
 	ok(f"RAM-only settings written to {path}")
 
 
-def main_panel():
+def all_panels():
 	panels = gsettings_get("panels-enabled")
 
 	if not panels:
 		fail("no panels enabled")
 
-	# Entries look like "1:0:bottom" (panel id : monitor : position); the first one is the main panel
-	return f"panel{panels[0].split(':')[0]}"
+	# Entries look like "1:0:bottom" (panel id : monitor : position)
+	return [f"panel{entry.split(':')[0]}" for entry in panels]
 
 
 def pick_instance_id(applets, panel):
@@ -220,17 +220,19 @@ def main():
 	applet_dir = install_applet()
 	schema = find_schema(applet_dir)
 
-	panel = main_panel()
+	panels = all_panels()
 	applets = gsettings_get("enabled-applets")
-	instance_id = pick_instance_id(applets, panel)
 
-	# Settings go in before the applet is enabled, so it starts up already showing only RAM
-	write_config(schema, instance_id)
+	# Each panel gets its own instance; ids are picked one panel at a time so new ones don't collide
+	for panel in panels:
+		instance_id = pick_instance_id(applets, panel)
 
-	new_applets = place_first(applets, panel, instance_id)
+		# Settings go in before the applet is enabled, so it starts up already showing only RAM
+		write_config(schema, instance_id)
+		applets = place_first(applets, panel, instance_id)
 
-	run(["gsettings", "set", "org.cinnamon", "enabled-applets", str(new_applets)])
-	ok(f"{UUID} is first on the {ZONE} side of {panel}")
+	run(["gsettings", "set", "org.cinnamon", "enabled-applets", str(applets)])
+	ok(f"{UUID} is first on the {ZONE} side of {', '.join(panels)}")
 
 
 if __name__ == "__main__":
