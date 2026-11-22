@@ -117,11 +117,12 @@ def install_applet():
 	return target
 
 
-def version_key(name):
+def version_key(name) -> tuple[int, ...]:
+	# Empty tuple (falsy) for names that aren't versions, like "po"
 	try:
 		return tuple(int(part) for part in name.split("."))
 	except ValueError:
-		return None
+		return ()
 
 
 def find_schema(applet_dir):
