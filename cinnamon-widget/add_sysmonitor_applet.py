@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install the System Monitor applet (sysmonitor@orcus), show only RAM, and put it first on the main panel's left."""
+"""Install the System Monitor applet (sysmonitor@orcus), show only RAM, and put it first on the main panel's right."""
 
 import ast
 import io
@@ -16,6 +16,9 @@ UUID = "sysmonitor@orcus"
 SPICE_URL = f"https://cinnamon-spices.linuxmint.com/files/applets/{UUID}.zip"
 APPLETS_DIR = Path.home() / ".local" / "share" / "cinnamon" / "applets"
 CONFIG_DIR = Path.home() / ".config" / "cinnamon" / "spices" / UUID
+
+# Panel zone to put the applet in; order 0 is the zone's leftmost slot
+ZONE = "right"
 
 # Only the memory graph is turned on
 GRAPHS = {
@@ -190,9 +193,9 @@ def pick_instance_id(applets, panel):
 
 
 def place_first(applets, panel, instance_id):
-	"""Return enabled-applets with UUID at order 0 on the left of `panel`, the rest of that zone renumbered after it."""
+	"""Return enabled-applets with UUID at order 0 in ZONE of `panel`, the rest of that zone renumbered after it."""
 	others = []
-	left = []
+	zone = []
 
 	for entry in applets:
 		fields = entry.split(":")
@@ -201,15 +204,15 @@ def place_first(applets, panel, instance_id):
 			others.append(entry)
 		elif fields[3] == UUID:
 			continue
-		elif fields[1] == "left":
-			left.append(fields)
+		elif fields[1] == ZONE:
+			zone.append(fields)
 		else:
 			others.append(entry)
 
-	left.sort(key=lambda fields: int(fields[2]) if fields[2].isdigit() else 0)
-	renumbered = [":".join([fields[0], fields[1], str(order), *fields[3:]]) for order, fields in enumerate(left, 1)]
+	zone.sort(key=lambda fields: int(fields[2]) if fields[2].isdigit() else 0)
+	renumbered = [":".join([fields[0], fields[1], str(order), *fields[3:]]) for order, fields in enumerate(zone, 1)]
 
-	return [f"{panel}:left:0:{UUID}:{instance_id}", *renumbered, *others]
+	return [f"{panel}:{ZONE}:0:{UUID}:{instance_id}", *renumbered, *others]
 
 
 def main():
@@ -227,7 +230,7 @@ def main():
 	new_applets = place_first(applets, panel, instance_id)
 
 	run(["gsettings", "set", "org.cinnamon", "enabled-applets", str(new_applets)])
-	ok(f"{UUID} is first on the left of {panel}")
+	ok(f"{UUID} is first on the {ZONE} side of {panel}")
 
 
 if __name__ == "__main__":
