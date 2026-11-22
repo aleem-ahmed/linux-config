@@ -20,6 +20,7 @@ SUB_SCRIPTS = [
 	(SCRIPT_DIR / "cinnamon-widget" / "set_grouped_window_list.py", False),
 	(SCRIPT_DIR / "cinnamon-widget" / "set_calendar_format.py", True),
 	(SCRIPT_DIR / "cinnamon-widget" / "set_workspace_switcher.py", False),
+	(SCRIPT_DIR / "cinnamon-widget" / "add_sysmonitor_applet.py", False),  # new
 	(SCRIPT_DIR / "gnome-terminal" / "set_gnome_terminal_font.py", False),
 	(SCRIPT_DIR / "gnome-terminal" / "set_gnome_terminal_theme_dracula.py", False),
 	(SCRIPT_DIR / "gnome-terminal" / "set_gnome_terminal_transparency.py", False),
