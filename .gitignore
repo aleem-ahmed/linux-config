@@ -30,7 +30,7 @@
 !gnome-terminal/**
 !software-check.sh
 !initialize-arch.py
-!initialize-cinnamon.py
+!configure-cinnamon.py
 
 # Hyprland
 !.config/hypr
