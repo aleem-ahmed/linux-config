@@ -40,7 +40,7 @@ def fail(msg):
 
 def run(cmd):
 	print(f"  $ {' '.join(cmd)}", flush=True)
-	result = subprocess.run(cmd)
+	result = subprocess.run(cmd, check=False)
 
 	if result.returncode != 0:
 		fail(f"command failed ({result.returncode}): {' '.join(cmd)}")
@@ -51,6 +51,7 @@ def gsettings_get(key):
 		["gsettings", "get", "org.cinnamon", key],
 		capture_output=True,
 		text=True,
+		check=False,
 	)
 
 	if result.returncode != 0:
@@ -64,7 +65,7 @@ def has_gtop():
 	# Checked in a fresh interpreter so a just-installed typelib gets picked up
 	check = "import gi; gi.require_version('GTop', '2.0')"
 
-	return subprocess.run([sys.executable, "-c", check], capture_output=True).returncode == 0
+	return subprocess.run([sys.executable, "-c", check], capture_output=True, check=False).returncode == 0
 
 
 def ensure_gtop():
