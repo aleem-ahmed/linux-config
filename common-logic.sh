@@ -17,3 +17,10 @@ colors()
 		done
 	done
 }
+
+zipproj()
+{
+	local dir="${1%/}"
+
+	zip -r "$dir.zip" "$dir" -x "$dir/target/*" "$dir/.git/*" "$dir/.env"
+}
