@@ -1,5 +1,5 @@
 source ~/detect-distro.sh
-
+#d
 if [[ "$DISTRO" == "arch" ]]; then
 	# arch-only stuff here
 	alias zed="zeditor"
